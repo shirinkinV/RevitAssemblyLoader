@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<Platforms>x64</Platforms>
+		<AssemblyVersion>0.0.0.5</AssemblyVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+	  <Optimize>False</Optimize>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="2022.1.21" />
+	  <PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="2022.1.21" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="RevitAssemblyLoader.addin">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

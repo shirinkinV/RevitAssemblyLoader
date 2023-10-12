@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>RevitAssemblyLoader</Name>
+		<Assembly>RevitAssemblyLoader/RevitAssemblyLoader.dll</Assembly>
+		<FullClassName>RevitAssemblyLoader.Startup</FullClassName>
+		<VendorId>Shirinkin VS</VendorId>
+		<VendorDescription>github.com/shirinkinV</VendorDescription>
+		<AddInId>bc673c48-58ed-421b-9c70-c7a8c50f11fa</AddInId>
+		<Text>RevitAssemblyLoader</Text>
+	</AddIn>
+</RevitAddIns>
