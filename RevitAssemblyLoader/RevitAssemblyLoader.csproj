@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net48</TargetFramework>
@@ -13,6 +13,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	  <PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="2022.1.21" />
 	  <PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="2022.1.21" />
