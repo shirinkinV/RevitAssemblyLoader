@@ -1,8 +1,6 @@
-﻿using RevitAssemblyLoader.UI.VM;
-using RevitAssemblyLoader.UI.VM;
-using System.Windows;
+﻿using System.Windows;
 
-namespace RevitAssemblyLoader.UI.View
+namespace RevitAssemblyLoader.UI
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

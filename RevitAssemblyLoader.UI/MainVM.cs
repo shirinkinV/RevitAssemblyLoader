@@ -1,4 +1,4 @@
-﻿namespace RevitAssemblyLoader.UI.VM
+﻿namespace RevitAssemblyLoader.UI
 {
     public class MainVM
     {

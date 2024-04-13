@@ -13,4 +13,8 @@
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\RevitAssemblyLoader.DI\RevitAssemblyLoader.DI.csproj" />
+	</ItemGroup>
+
 </Project>

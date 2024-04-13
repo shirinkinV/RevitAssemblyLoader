@@ -10,4 +10,10 @@
 	  <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RevitAssemblyLoader.Abstractions\RevitAssemblyLoader.Abstractions.csproj" />
+    <ProjectReference Include="..\RevitAssemblyLoader.Model\RevitAssemblyLoader.Model.csproj" />
+    <ProjectReference Include="..\RevitAssemblyLoader.UI\RevitAssemblyLoader.UI.csproj" />
+  </ItemGroup>
+
 </Project>

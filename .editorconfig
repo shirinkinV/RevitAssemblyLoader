@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0160: Преобразовать в namespace с заданной областью видимости блока
+csharp_style_namespace_declarations = file_scoped
