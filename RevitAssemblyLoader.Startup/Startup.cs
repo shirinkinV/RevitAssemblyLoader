@@ -1,13 +1,7 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using RevitAssemblyLoader.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace RevitAssemblyLoader
@@ -17,16 +11,21 @@ namespace RevitAssemblyLoader
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            var newThread = new Thread(() =>
+            /*var newThread = new Thread(() =>
             {
                 var window = new MainWindow();
                 window.Show();
+                window.Closing += Window_Closing;
                 Dispatcher.Run();
             });
             newThread.SetApartmentState(ApartmentState.STA);
-            newThread.Start();
-
+            newThread.Start();*/
             return Result.Succeeded;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Dispatcher.CurrentDispatcher.InvokeShutdown();
         }
     }
 }

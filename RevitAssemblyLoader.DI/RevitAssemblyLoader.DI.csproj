@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net48</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <Configurations>Debug;Release;Test;Design</Configurations>
+	  <Platforms>x64</Platforms>
+	  <Optimize>False</Optimize>
+	  <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+</Project>
