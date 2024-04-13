@@ -1,15 +1,11 @@
 ﻿using System.Windows;
 
-namespace RevitAssemblyLoader.UI.View
+namespace RevitAssemblyLoader.UI.View;
+
+public partial class SettingsView : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для Settings.xaml
-    /// </summary>
-    public partial class SettingsView : Window
+    public SettingsView()
     {
-        public SettingsView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

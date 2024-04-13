@@ -1,20 +1,31 @@
-﻿using System.Windows;
+﻿using RevitAssemblyLoader.Abstractions;
+using System.Windows;
 
-namespace RevitAssemblyLoader.UI
+namespace RevitAssemblyLoader.UI;
+
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public MainWindow(IContainerVM mainVM)
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        DataContext = mainVM;
+        (DataContext as MainVM).PropertyChanged += Content_PropertyChanged;
+    }
 
-        private void Window_Closed(object sender, EventArgs e)
+    private void Content_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(MainVM.Content))
         {
-            Dispatcher.InvokeShutdown();
+            Width = (DataContext as MainVM).Content.RecomendedWindowWidth;
+            Height = (DataContext as MainVM).Content.RecomendedWindowHeight;
         }
+    }
+
+    private void Window_Closed(object sender, EventArgs e)
+    {
+        Dispatcher.InvokeShutdown();
+#if !DESIGN
+        (DataContext as MainVM).ApplicationClosing?.Invoke();
+#endif
     }
 }

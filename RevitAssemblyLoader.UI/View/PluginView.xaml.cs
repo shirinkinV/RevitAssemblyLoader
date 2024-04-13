@@ -1,15 +1,11 @@
 ﻿using System.Windows.Controls;
 
-namespace RevitAssemblyLoader.UI.View
+namespace RevitAssemblyLoader.UI.View;
+
+public partial class PluginView : UserControl
 {
-    /// <summary>
-    /// Логика взаимодействия для PluginView.xaml
-    /// </summary>
-    public partial class PluginView : UserControl
+    public PluginView()
     {
-        public PluginView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

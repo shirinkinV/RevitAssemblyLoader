@@ -6,39 +6,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:RevitAssemblyLoader.UI"
     mc:Ignorable="d"
-    Title="RevitAssemblyLoader"
-    Height="450"
-    Width="800"
-    Closed="Window_Closed"
+    Title="{Binding Title}"
+    Height="500"
+    Width="500"
+    ResizeMode="CanResize"
+    d:DataContext="{d:DesignInstance Type=local:MainVM}"
+    xmlns:theme="clr-namespace:RevitAssemblyLoader.UI.Theme"
     xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:vm="clr-namespace:RevitAssemblyLoader.UI"
-    xmlns:view="clr-namespace:RevitAssemblyLoader.UI.View"
-    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    Background="{DynamicResource MaterialDesignPaper}"
-    Padding="10">
-    <Window.DataContext>
-        <vm:MainVM />
-    </Window.DataContext>
+    Closed="Window_Closed"
+    Style="{StaticResource MaterialDesignWindow}">
     <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <md:BundledTheme
-                    BaseTheme="Inherit"
-                    PrimaryColor="LightBlue"
-                    SecondaryColor="Orange" />
-                <ResourceDictionary
-                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <theme:MainTheme />
     </Window.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition
-                Width="300" />
-            <ColumnDefinition
-                Width="500" />
-        </Grid.ColumnDefinitions>
-        <view:ListOfPlugins
-            x:Name="ListOfPlugins" />
-    </Grid>
+    <ContentControl
+        Content="{Binding Content}"
+        ContentTemplateSelector="{StaticResource MainTemplateSelector}">
+    </ContentControl>
 </Window>

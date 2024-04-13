@@ -1,6 +1,5 @@
-﻿namespace RevitAssemblyLoader.UI.VM
+﻿namespace RevitAssemblyLoader.UI.VM;
+
+public class SettingsVM
 {
-    internal class SettingsVM
-    {
-    }
 }

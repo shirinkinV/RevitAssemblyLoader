@@ -1,7 +1,6 @@
-﻿namespace RevitAssemblyLoader.Model
-{
-    public class Settings
-    {
+﻿namespace RevitAssemblyLoader.Model;
 
-    }
+public class Settings
+{
+
 }

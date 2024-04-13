@@ -1,7 +1,6 @@
-﻿namespace RevitAssemblyLoader.Model
+﻿namespace RevitAssemblyLoader.Model;
+
+public class ListOfPlugins
 {
-    public class ListOfPlugins
-    {
-        public List<PluginExternalCommand> Plugins { get; set; }
-    }
+    public List<PluginExternalCommand> Plugins { get; set; }
 }

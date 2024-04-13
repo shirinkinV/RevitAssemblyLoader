@@ -17,15 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RevitAssemblyLoader.UITest"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RevitAssemblyLoader.Model", "RevitAssemblyLoader.Model\RevitAssemblyLoader.Model.csproj", "{D84658DC-D46F-4C91-9DCE-8977A8A8EC79}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{EBB0C2C8-DC9A-4DB2-AAAF-B6AE37DA5BF4}"
-	ProjectSection(SolutionItems) = preProject
-		repack.bat = repack.bat
-		version.txt = version.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE64919E-4ED6-49D0-9699-EDB6C5E6DB39}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		repack.bat = repack.bat
+		repack_test.bat = repack_test.bat
+		version.txt = version.txt
 	EndProjectSection
 EndProject
 Global

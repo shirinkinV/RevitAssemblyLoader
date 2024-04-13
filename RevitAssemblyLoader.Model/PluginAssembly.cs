@@ -1,24 +1,26 @@
 ﻿using System.Reflection;
 
-namespace RevitAssemblyLoader.Model
+namespace RevitAssemblyLoader.Model;
+
+public class PluginAssembly
 {
-    public class PluginAssembly
-    {
-        /// <summary>
-        /// The name of an assembly
-        /// </summary>
-        public AssemblyName AssemblyName { get; set; }
+    /// <summary>
+    /// The name of an assembly
+    /// </summary>
+    public AssemblyName AssemblyName { get; set; }
 
-        /// <summary>
-        /// Where the assembly is located in file system (we're using only LoadFile context)
-        /// </summary>
-        public string Location { get; set; }
+    /// <summary>
+    /// Where the assembly is located in file system (we're using only LoadFile context)
+    /// </summary>
+    public string Location { get; set; }
 
-        /// <summary>
-        /// The set of another assemblies being used as dependency for this assembly
-        /// </summary>
-        public List<PluginAssembly> Dependencies { get; set; }
+    /// <summary>
+    /// The set of another assemblies being used as dependency for this assembly
+    /// </summary>
+    public List<PluginAssembly>? Dependencies { get; set; }
 
-
-    }
+    /// <summary>
+    /// Type of assembly: main or dependency
+    /// </summary>
+    public PluginAssemblyType PluginAssemblyType { get; set; }
 }

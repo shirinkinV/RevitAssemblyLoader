@@ -2,9 +2,9 @@
 
 namespace RevitAssemblyLoader.UI.View;
 
-public partial class PluginPropertiesView : UserControl
+public partial class PluginsView : UserControl
 {
-    public PluginPropertiesView()
+    public PluginsView()
     {
         InitializeComponent();
     }
